@@ -41,7 +41,7 @@ def main(settings):
         game_id = game['id']
         game_place = int(game['rootPlace']['id'])
 
-        if not mass_unfavor and game_place not in whitelist:
+        if game_place not in whitelist:
             unfavor = 'y' if mass_unfavor else input(Fore.LIGHTWHITE_EX + f"Do you want to unfavor game {game_name} (ID: {game_place})? (y/n): ").strip().lower()
 
             if unfavor == 'y':
